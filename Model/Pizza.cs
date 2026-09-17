@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Globalization;
 
 namespace BlazingPizza
 {
@@ -35,8 +36,8 @@ namespace BlazingPizza
         }
 
         public string GetFormattedTotalPrice()
-        {
-            return GetTotalPrice().ToString("0.00");
-        }
+{
+    return GetTotalPrice().ToString("C2", CultureInfo.GetCultureInfo("en-US"));
+}
     }
 }
